@@ -2,7 +2,9 @@ import AppForm from '../app-components/Form/AppForm';
 
 Vue.component('book-form', {
     mixins: [AppForm],
-  
+    props: [
+        'writers'
+    ],
     data: function() {
         return {
             form: {
@@ -10,9 +12,7 @@ Vue.component('book-form', {
                 description:  '' ,
                 writer_id:  '' ,
                 writer:  '' ,
-            },  props: [
-                'writers'
-            ],
+            }
         }
     }
 

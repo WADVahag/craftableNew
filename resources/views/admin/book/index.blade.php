@@ -37,7 +37,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row" v-if="showWritersFilter">
+                                {{-- <div class="row" v-if="showWritersFilter">
                                     <div class="col-sm-auto form-group">
                                         <p>{{ __('Select writer/s') }}</p>
                                     </div>
@@ -51,7 +51,7 @@
                                              :multiple="true">
                                         </multiselect>
                                     </div>
-                                </div>
+                                </div> --}}
                             </form>
 
                             <table class="table table-hover table-listing">
@@ -84,19 +84,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <user-detail-tooltip :user="item.writer" v-if="item.writer">
-                                    </user-detail-tooltip>
+                        
                                     <tr v-for="(item, index) in collection" :key="item.id" :class="bulkItems[item.id] ? 'bg-bulk' : ''">
                                         <td class="bulk-checkbox">
                                             <input class="form-check-input" :id="'enabled' + item.id" type="checkbox" v-model="bulkItems[item.id]" v-validate="''" :data-vv-name="'enabled' + item.id"  :name="'enabled' + item.id + '_fake_element'" @click="onBulkItemClicked(item.id)" :disabled="bulkCheckingAllLoader">
                                             <label class="form-check-label" :for="'enabled' + item.id">
                                             </label>
                                         </td>
+                                        {{-- <td> 
+                                            <user-detail-tooltip :user="item.writer" v-if="item.writer">
+                                            </user-detail-tooltip>
 
+                                        </td> --}}
                                     <td>@{{ item.id }}</td>
                                         <td>@{{ item.name }}</td>
                                         <td>@{{ item.description }}</td>
-                                        <td>@{{ item.writer_id }}</td>
+                                        <td>@{{ item.writer.name }}</td>
                                         
                                         <td>
                                             <div class="row no-gutters">

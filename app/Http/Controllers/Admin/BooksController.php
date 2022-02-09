@@ -9,6 +9,7 @@ use App\Http\Requests\Admin\Book\IndexBook;
 use App\Http\Requests\Admin\Book\StoreBook;
 use App\Http\Requests\Admin\Book\UpdateBook;
 use App\Models\Book;
+use App\Models\Writer;
 use Brackets\AdminListing\Facades\AdminListing;
 use Exception;
 use Illuminate\Auth\Access\authorizationException;
