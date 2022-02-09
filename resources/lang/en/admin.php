@@ -64,5 +64,55 @@ return [
         ],
     ],
 
+    'writer' => [
+        'title' => 'Writers',
+
+        'actions' => [
+            'index' => 'Writers',
+            'create' => 'New Writer',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            
+        ],
+    ],
+
+    'book' => [
+        'title' => 'Books',
+
+        'actions' => [
+            'index' => 'Books',
+            'create' => 'New Book',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'description' => 'Description',
+            'writer_id' => 'Writer',
+            
+        ],
+    ],
+
+    'tesster' => [
+        'title' => 'Tessters',
+
+        'actions' => [
+            'index' => 'Tessters',
+            'create' => 'New Tesster',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

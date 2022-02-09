@@ -73,3 +73,48 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('writers')->name('writers/')->group(static function() {
+            Route::get('/',                                             'WritersController@index')->name('index');
+            Route::get('/create',                                       'WritersController@create')->name('create');
+            Route::post('/',                                            'WritersController@store')->name('store');
+            Route::get('/{writer}/edit',                                'WritersController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'WritersController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{writer}',                                    'WritersController@update')->name('update');
+            Route::delete('/{writer}',                                  'WritersController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('books')->name('books/')->group(static function() {
+            Route::get('/',                                             'BooksController@index')->name('index');
+            Route::get('/create',                                       'BooksController@create')->name('create');
+            Route::post('/',                                            'BooksController@store')->name('store');
+            Route::get('/{book}/edit',                                  'BooksController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'BooksController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{book}',                                      'BooksController@update')->name('update');
+            Route::delete('/{book}',                                    'BooksController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('tessters')->name('tessters/')->group(static function() {
+            Route::get('/',                                             'TesstersController@index')->name('index');
+            Route::get('/create',                                       'TesstersController@create')->name('create');
+            Route::post('/',                                            'TesstersController@store')->name('store');
+            Route::get('/{tesster}/edit',                               'TesstersController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'TesstersController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{tesster}',                                   'TesstersController@update')->name('update');
+            Route::delete('/{tesster}',                                 'TesstersController@destroy')->name('destroy');
+        });
+    });
+});
