@@ -7,6 +7,10 @@
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/writers') }}"><i class="nav-icon icon-ghost"></i> {{ trans('admin.writer.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/books') }}"><i class="nav-icon icon-compass"></i> {{ trans('admin.book.title') }}</a></li>
            <li class="nav-item"><a class="nav-link" href="{{ url('admin/tessters') }}"><i class="nav-icon icon-plane"></i> {{ trans('admin.tesster.title') }}</a></li>
+           {{-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/rooms') }}"><i class="nav-icon icon-star"></i> {{ trans('admin.room.title') }}</a></li> --}}
+           {{-- <li class="nav-item"><a class="nav-link" href="{{ url('admin/customers') }}"><i class="nav-icon icon-puzzle"></i> {{ trans('admin.customer.title') }}</a></li> --}}
+           <li class="nav-item"><a class="nav-link" href="{{ url('admin/hotelrooms') }}"><i class="nav-icon icon-compass"></i> {{ trans('admin.hotelroom.title') }}</a></li>
+           <li class="nav-item"><a class="nav-link" href="{{ url('admin/newcustomers') }}"><i class="nav-icon icon-energy"></i> {{ trans('admin.newcustomer.title') }}</a></li>
            {{-- Do not delete me :) I'm used for auto-generation menu items --}}
 
             <li class="nav-title">{{ trans('brackets/admin-ui::admin.sidebar.settings') }}</li>

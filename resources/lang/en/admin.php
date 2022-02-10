@@ -114,5 +114,67 @@ return [
         ],
     ],
 
+    'room' => [
+        'title' => 'Rooms',
+
+        'actions' => [
+            'index' => 'Rooms',
+            'create' => 'New Room',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            
+        ],
+    ],
+
+    'customer' => [
+        'title' => 'Customers',
+
+        'actions' => [
+            'index' => 'Customers',
+            'create' => 'New Customer',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            
+        ],
+    ],
+
+    'hotelroom' => [
+        'title' => 'Hotelrooms',
+
+        'actions' => [
+            'index' => 'Hotelrooms',
+            'create' => 'New Hotelroom',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            
+        ],
+    ],
+
+    'newcustomer' => [
+        'title' => 'Newcustomers',
+
+        'actions' => [
+            'index' => 'Newcustomers',
+            'create' => 'New Newcustomer',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

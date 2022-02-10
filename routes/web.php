@@ -118,3 +118,63 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('rooms')->name('rooms/')->group(static function() {
+            Route::get('/',                                             'RoomsController@index')->name('index');
+            Route::get('/create',                                       'RoomsController@create')->name('create');
+            Route::post('/',                                            'RoomsController@store')->name('store');
+            Route::get('/{room}/edit',                                  'RoomsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'RoomsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{room}',                                      'RoomsController@update')->name('update');
+            Route::delete('/{room}',                                    'RoomsController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('customers')->name('customers/')->group(static function() {
+            Route::get('/',                                             'CustomersController@index')->name('index');
+            Route::get('/create',                                       'CustomersController@create')->name('create');
+            Route::post('/',                                            'CustomersController@store')->name('store');
+            Route::get('/{customer}/edit',                              'CustomersController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'CustomersController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{customer}',                                  'CustomersController@update')->name('update');
+            Route::delete('/{customer}',                                'CustomersController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('hotelrooms')->name('hotelrooms/')->group(static function() {
+            Route::get('/',                                             'HotelroomsController@index')->name('index');
+            Route::get('/create',                                       'HotelroomsController@create')->name('create');
+            Route::post('/',                                            'HotelroomsController@store')->name('store');
+            Route::get('/{hotelroom}/edit',                             'HotelroomsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'HotelroomsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{hotelroom}',                                 'HotelroomsController@update')->name('update');
+            Route::delete('/{hotelroom}',                               'HotelroomsController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('App\Http\Controllers\Admin')->name('admin/')->group(static function() {
+        Route::prefix('newcustomers')->name('newcustomers/')->group(static function() {
+            Route::get('/',                                             'NewcustomersController@index')->name('index');
+            Route::get('/create',                                       'NewcustomersController@create')->name('create');
+            Route::post('/',                                            'NewcustomersController@store')->name('store');
+            Route::get('/{newcustomer}/edit',                           'NewcustomersController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'NewcustomersController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{newcustomer}',                               'NewcustomersController@update')->name('update');
+            Route::delete('/{newcustomer}',                             'NewcustomersController@destroy')->name('destroy');
+        });
+    });
+});

@@ -6,3 +6,7 @@ import './post';
 import './writer';
 import './book';
 import './tesster';
+import './room';
+import './customer';
+import './hotelroom';
+import './newcustomer';
