@@ -28,7 +28,7 @@ class StoreBook extends FormRequest
         return [
             'name' => ['required', 'string'],
             'description' => ['required', 'string'],
-            'writer_id' => ['required'],
+            'writer_id' => ['sometimes'],
             
         ];
     }

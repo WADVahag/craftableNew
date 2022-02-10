@@ -17,32 +17,24 @@
 <div class="form-group row align-items-center" :class="{'has-danger': errors.has('writer_id'), 'has-success': fields.writer_id && fields.writer_id.valid }">
     <label for="writer_id" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.book.columns.writer_id') }}</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
-<input type="text" v-model="form.writer_id" v-validate="'required'" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('writer_id'), 'form-control-success': fields.writer_id && fields.writer_id.valid}" min='1' id="writer_id" name="writer_id" placeholder="{{ trans('admin.book.columns.writer_id') }}" >
-
-
-        <div v-if="errors.has('writer_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('writer_id') }}</div>
-    </div>
+           
+                <multiselect
+                 v-model="form.writer"
+                 :options="writers"
+                 :multiple="false"
+                 track-by="id"
+                 label="name"
+                 tag-placeholder="{{ __('Select Writer') }}"
+                 placeholder="{{ __('Writer') }}">
+             </multiselect>
+         
+         
+                 <div v-if="errors.has('writer_id')" class="form-control-feedback form-text" v-cloak>@{{
+                     errors.first('writer_id') }}
+                 </div>
+   
 </div>
 
-<div class="form-group row align-items-center"
-     :class="{'has-danger': errors.has('writer_id'), 'has-success': this.fields.writer_id && this.fields.writer_id.valid }">
-     <label for="writer_id" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.book.columns.writer_id') }}</label>
-    <div class="col-md-8 col-lg-9">
-       <multiselect
-        v-model="form.writer"
-        :options="writers"
-        :multiple="false"
-        track-by="id"
-        label="name"
-        tag-placeholder="{{ __('Select Writer') }}"
-        placeholder="{{ __('Writer') }}">
-    </multiselect>
 
-
-        <div v-if="errors.has('writer_id')" class="form-control-feedback form-text" v-cloak>@{{
-            errors.first('writer_id') }}
-        </div>
-    </div>
-</div>
 
 

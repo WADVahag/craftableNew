@@ -37,7 +37,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                {{-- <div class="row" v-if="showWritersFilter">
+                                <div class="row" v-if="showWritersFilter">
                                     <div class="col-sm-auto form-group">
                                         <p>{{ __('Select writer/s') }}</p>
                                     </div>
@@ -51,7 +51,7 @@
                                              :multiple="true">
                                         </multiselect>
                                     </div>
-                                </div> --}}
+                                </div>
                             </form>
 
                             <table class="table table-hover table-listing">
@@ -91,14 +91,15 @@
                                             <label class="form-check-label" :for="'enabled' + item.id">
                                             </label>
                                         </td>
-                                        {{-- <td> 
-                                            <user-detail-tooltip :user="item.writer" v-if="item.writer">
-                                            </user-detail-tooltip>
-
-                                        </td> --}}
+      
                                     <td>@{{ item.id }}</td>
                                         <td>@{{ item.name }}</td>
                                         <td>@{{ item.description }}</td>
+                                        {{-- <td> 
+                                            <user-detail-tooltip :user="item.writer.name" v-if="item.writer.name">
+                                            </user-detail-tooltip>
+
+                                        </td> --}}
                                         <td>@{{ item.writer.name }}</td>
                                         
                                         <td>
