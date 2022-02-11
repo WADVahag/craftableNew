@@ -78,7 +78,7 @@ class PostsController extends Controller
     {
 
         // this will automatically attach $request->file('gallery') to the Post
-        $post = Post::create($request->validated());
+        // $post = Post::create($request->validated());
 
         // Sanitize input
         $sanitized = $request->getSanitized();
